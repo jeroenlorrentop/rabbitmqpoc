@@ -3,10 +3,11 @@ using System;
 namespace RabbitPoc.Core
 {
     [AttributeUsage(AttributeTargets.Class)]
-    public class QueueNameAttribute : Attribute
+    public class QueueAttribute : Attribute
     {
         public string NameTemplate { get;  }
-        public QueueNameAttribute(string nameTemplate)
+        
+        public QueueAttribute(string nameTemplate)
         {
             NameTemplate = nameTemplate;
         }

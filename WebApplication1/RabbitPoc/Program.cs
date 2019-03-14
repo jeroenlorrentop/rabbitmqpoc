@@ -32,7 +32,7 @@ namespace RabbitPoc
         }
     }
     
-    [QueueName("{DefaultQueue}_PriorityDelivery_{MachineName}")]
+    [Queue("{DefaultQueue}_PriorityDelivery")]
     public class ConsumerWithDifferentQueue : IConsumer<TestConsumerMessage>
     {
         public Task Consume(ConsumeContext<TestConsumerMessage> context)

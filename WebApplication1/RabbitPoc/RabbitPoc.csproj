@@ -48,10 +48,6 @@
       <HintPath>..\packages\MassTransit.5.3.2\lib\net452\MassTransit.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="MassTransit.AutofacIntegration, Version=5.3.2.0, Culture=neutral, PublicKeyToken=b8e0e9f2f1e657fa">
-      <HintPath>..\packages\MassTransit.Autofac.5.3.2\lib\net452\MassTransit.AutofacIntegration.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="MassTransit.RabbitMqTransport, Version=5.3.2.0, Culture=neutral, PublicKeyToken=b8e0e9f2f1e657fa">
       <HintPath>..\packages\MassTransit.RabbitMQ.5.3.2\lib\net452\MassTransit.RabbitMqTransport.dll</HintPath>
       <Private>True</Private>
@@ -99,7 +95,7 @@
     <Compile Include="Core\IBusSettings.cs" />
     <Compile Include="Core\IQueueNameParser.cs" />
     <Compile Include="Core\MessagingModule.cs" />
-    <Compile Include="Core\QueueNameAttribute.cs" />
+    <Compile Include="Core\QueueAttribute.cs" />
     <Compile Include="Core\QueueNameParser.cs" />
     <Compile Include="Core\RabbitMqBusFactory.cs" />
     <Compile Include="Program.cs" />

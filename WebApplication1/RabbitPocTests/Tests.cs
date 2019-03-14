@@ -7,7 +7,7 @@ namespace RabbitPocTests
 {
     public class Tests
     {
-        [QueueName("MyTestQueueNameWithAVariable-{MachineName}-{Guid}")]
+        [Queue("MyTestQueueNameWithAVariable-{MachineName}-{Guid}")]
         public class TestClassForQueueAttribute
         {
             
@@ -18,7 +18,7 @@ namespace RabbitPocTests
             
         }
         
-        [QueueName("SomeRandomQueueName")]
+        [Queue("SomeRandomQueueName")]
         public class DerivedTestClassWithOwnAttribute : TestClassForQueueAttribute
         {
             

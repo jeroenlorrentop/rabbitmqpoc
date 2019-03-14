@@ -17,7 +17,9 @@ namespace RabbitPoc.Core
        
         public string Parse(string template)
         {
-            return SmartFormat.Smart.Format(template, _values);
+            var firstRun = SmartFormat.Smart.Format(template, _values);
+            // 2 time parsing because DefaultQueue can have MachineName in it. 
+            return SmartFormat.Smart.Format(firstRun,_values);
         }
     }
 }

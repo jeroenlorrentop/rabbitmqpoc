@@ -12,8 +12,8 @@ namespace RabbitPoc.Core
         public static ConsumerMetaData Create(Type type)
         {
             var meta = new ConsumerMetaData {ConsumerType = type};
-            var att = type.GetCustomAttributes(typeof(QueueNameAttribute), true).FirstOrDefault();
-            meta.QueueNameTemplate = att == null ? "{DefaultQueue}" : ((QueueNameAttribute) att).NameTemplate;
+            var att = type.GetCustomAttributes(typeof(QueueAttribute), true).FirstOrDefault();
+            meta.QueueNameTemplate = att == null ? "{DefaultQueue}" : ((QueueAttribute) att).NameTemplate;
 
            return meta;
         }
